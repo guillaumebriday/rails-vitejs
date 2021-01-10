@@ -1,9 +1,9 @@
 module ApplicationHelper
   def javascript_vite_tag
     if Rails.env.development?
-      sources = [
-        "http://localhost:3001/@vite/client",
-        "http://localhost:3001/application.js"
+      sources = %w[
+        http://localhost:3001/@vite/client
+        http://localhost:3001/application.js
       ]
 
       sources.map do |src|
